@@ -2,7 +2,11 @@ Package: bambu
 Type: Package
 Title: Reference-guided isoform reconstruction and quantification for long read 
     RNA-Seq data
+<<<<<<< HEAD
 Version: 2.0.1
+=======
+Version: 2.1.2
+>>>>>>> 52d5c64... bug fix: fix the errors when txScore is NULL
 Authors@R: c(person("Ying", "Chen", role = c("cre","aut"),
              email = "chen_ying@gis.a-star.edu.sg"),
              person("Andre", "Sim", role = "aut",
