@@ -81,7 +81,7 @@ We highly recommend using the same annotations that were used for genome alignme
 ```rscript
 se = bambu(reads = sample, annotations = annotations, genome = fa.file)
 ```
-reads -  is a path to one or more bam files aligned to the same genome used in the genome argument, or a path to intermediate read class files (see [Storing and using preprocessed files (rcFiles)](#Storing-and-using-preprocessed-files-(rcFiles)))
+reads -  is a path to one or more bam files aligned to the same genome used in the genome argument, or a path to intermediate read class files (see [Storing and using preprocessed files (rcFiles)](#Storing-and-using-preprocessed-files-rcFiles))
 genome - is a path to the genome fasta file. This should be the same file used for read alignment. Bambu does not support alignment to the transcriptome as it requires the splice junctions from a genome alignment for transcript discovery.
 annotations - takes a path to a gtf file, a txdb object, or annotations prepared by prepareAnnotations() (see  [Use precalculated annotation objects](#Use-precalculated-annotation-objects)). When not provided, de novo transcript discovery is performed (see [De-novo transcript discovery](#De-novo-transcript-discovery))
 NDR - Novel Discovery Rate threshold. A value between 0 and 1 representing the maximum NDR threshold for candidate transcripts to be included in the analysis. By default, Bambu will recommend a threshold for your analysis. For more information see [Modulating the sensitivity of discovery (pre and post analysis)](#Modulating-the-sensitivity-of-discovery-(pre-and-post-analysis))
@@ -133,7 +133,7 @@ If you need to combine samples in multiple configurations (for example different
 
 When doing transcript discovery there is a balance between sensitivity (the number of real novel transcripts that are detected) and the precision (how many of the novel transcripts are real). To control this balance bambu uses the novel discovery rate (NDR) as the main parameter. The NDR threshold approximates the proportion of novel candidates output by bambu, relative to the number of known transcripts it found. I.E an NDR of 0.1 would mean that 10% of all transcripts passing the threshold are classified as novel. 
 
-If you are using a genome where you expect a high amount of novel transcripts, a higher NDR is recommended so that these novel transcripts are not missed. Conversely if you are using a well annotated genome, we recommend a lower NDR threshold to reduce the presence of false positives. By default the NDR threshold is automatically chosen for the user based on predicted level of annotation completeness when compared to the default model trained on human reference annotations (Hg38). For more information see [Training a model on another species/dataset and applying it](#Training-a-model-on-another-species/dataset-and-applying-it)
+If you are using a genome where you expect a high amount of novel transcripts, a higher NDR is recommended so that these novel transcripts are not missed. Conversely if you are using a well annotated genome, we recommend a lower NDR threshold to reduce the presence of false positives. By default the NDR threshold is automatically chosen for the user based on predicted level of annotation completeness when compared to the default model trained on human reference annotations (Hg38). For more information see [Training a model on another species/dataset and applying it](#Training-a-model-on-another-speciesdataset-and-applying-it)
 
 To manually select an NDR value, use the NDR argument in bambu:
 
