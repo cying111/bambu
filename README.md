@@ -31,7 +31,7 @@
   - [De-novo transcript discovery](#De-novo-transcript-discovery)
   - [Storing and using preprocessed files (rcFiles)](#Storing-and-using-preprocessed-files-rcFiles)
   - [Tracking read-to-transcript assignment](#Tracking-read-to-transcript-assignment)
-  - [Training a model on another species/dataset and applying it](#Training-a-model-on-another-species-dataset-and-applying-it)
+  - [Training a model on another species/dataset and applying it](#Training-a-model-on-another-speciesdataset-and-applying-it)
   - [Bambu Arguments](#Bambu-Arguments)
   - [Output Description](#Output-Description)
 - [Release History](#Release-History)
